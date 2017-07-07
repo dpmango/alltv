@@ -1,0 +1,27 @@
+---
+title: AllTV Online | tree
+---
+extends layouts/_layout
+block content
+  section.tree
+    amp-img(src="/img/banner970.jpg" layout="responsive" width="970" height="90"  alt="AMP" class="banner banner-center")
+    amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+    ul.category-list
+      li.category-row
+        - var categories = ["Новости","Общее ТВ", "Местное ТВ", "Спорт", "Развлечения", "Фильмы", "Детские", "Музыка", "Образование","Новости","Общее ТВ", "Местное ТВ", "Спорт", "Развлечения", "Фильмы", "Детские", "Музыка", "Образование"]
+          each catagory in categories
+            a(href="#" val=a).category-link= catagory
+    .panels.mob-visible
+      .panels__title Язык
+    ul.countries-list
+      - var countries = [{title: "A", names: ["Австрия","Албания","Албания","Австрия","Австрия",]}, {title: "Б", names: ["Булоруссия","Бразилия","Бельгия","Бельгия","Бельгия",]},{title: "A", names: ["Австрия","Албания","Австрия","Австрия","Австрия",]}, {title: "Б", names: ["Булоруссия","Бразилия","Бельгия","Бельгия","Бельгия",]},{title: "A", names: ["Австрия","Австрия",]}, {title: "Б", names: ["Булоруссия","Бельгия","Бельгия",]},{title: "A", names: ["Австрия","Албания","Австрия","Албания","Австрия","Австрия","Австрия",]}, {title: "Б", names: ["Булоруссия","Бразилия","Бельгия","Бельгия","Бельгия",]},{title: "A", names: ["Албания","Австрия","Австрия","Австрия",]}, {title: "Б", names: ["Бельгия","Бельгия","Бельгия"]},{title: "A", names: ["Австрия","Албания","Австрия","Австрия",]}, {title: "Б", names: ["Булоруссия","Бразилия","Булоруссия","Бразилия","Бельгия","Бельгия","Бельгия",]},{title: "A", names: ["Австрия","Албания"]}, {title: "Б", names: ["Булоруссия","Бразилия","Бельгия","Бельгия","Бельгия",]},{title: "A", names: ["Австрия","Австрия",]}, {title: "Б", names: ["Булоруссия","Бельгия","Бельгия",]},{title: "A", names: ["Австрия","Албания"]}, {title: "Б", names: ["Булоруссия","Бразилия"]},{title: "A", names: ["Австрия","Албания","Австрия","Австрия","Австрия",]}, {title: "Б", names: ["Бельгия","Бельгия","Бельгия"]}]
+        each i in countries
+          li.countries-col
+            .countries-col__letter= i.title
+            .countries-col__items
+              each name in i.names
+                a(href="#").country-item
+                  span.flag
+                    span.flag-icon.flag--es
+                  span.country-item__name= name
+             

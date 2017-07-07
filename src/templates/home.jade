@@ -1,0 +1,120 @@
+---
+title: AllTV Online | home
+_selector: true
+_lightbox: true
+---
+extends layouts/_layout
+block content
+  amp-img(src="/img/banner970.jpg" layout="responsive" width="970" height="90"  alt="AMP" class="banner banner-center")
+  amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+  section.section
+    h2.h2.mob-hidden Популярные каналы
+    .section__wrapper.channels-wrapper
+      .channels
+        //begin
+        .channel-box.channel-box_right.channel-box_2x.channel-img-box.banner
+          amp-img(src="img/banner-250x250.jpg" layout="responsive" width="250" height="200"  alt="banner")
+        //end
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+  section.section.mob-hidden
+    h2.h2 Все каналы
+    .section__wrapper.channels-wrapper
+      .channels
+        //begin
+        .channel-box.channel-box_right.channel-box_4x
+          include partials/_regional_item
+        //end
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+  amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+
+  section.section
+    h2.h2 Музыка
+    .section__wrapper.channels-wrapper
+      .channels
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item_no-programm
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+    .channels-group.channels-group_regional.mob-visible
+      .channels-group__head Региональное ТВ
+      .channels-group__inner
+        include partials/_channel_item
+        include partials/_channel_item
+        include partials/_channel_item_no-programm
+        include partials/_channel_item_no-programm
+        include partials/_channel_item_no-programm
+        include partials/_channel_item
+  section.section
+
+    .socials-box
+      .socials
+        - var socials = ['facebook','gplus','twitter','fav','link','bitly','telegram','ok','vk',]
+          each social in socials
+            a(class="social-share" href="#" role="button")
+              .social-share__icon
+                +icon('icon-social-'+social)
+  section.section
+    h2.h2.indent-x2 Смотрите ТВ онлайн без регистрации на allTVonline.ru!
+    .section__wrapper
+      .section__image-right.mob-hidden
+        amp-img(src="/img/mac.png" layout="responsive" alt="mac" width="343" height="257")
+      p.section__text.
+        Начать смотреть онлайн ТВ можно, выбрав страну и тематику телеканала используя удобный пульт управления, который находится в сайдбаре слева. В центре страницы распологаются популярные каналы вашего региона. Добавить канал на наш сервис можно выбрав пункт "Добавить канал" в верхнем меню. 
+      p.section__text.
+        Добавление полностью бесплатное, более того мы готовы платить отчисления волонтерам и владельцам стримов. Для использования полного функционала сервиса мы рекомендуем вам войти под своим аккаунтом ВК. allTVonline — лучший бесплатный сервис для просмотра телевизора в интернете онлайн.

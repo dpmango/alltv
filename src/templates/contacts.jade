@@ -1,0 +1,37 @@
+---
+title: AllTV Online | contacts
+---
+extends layouts/_layout
+block content
+  amp-img(src="/img/banner970.jpg" layout="responsive" width="970" height="90"  alt="AMP" class="banner banner-center")
+  amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+  section.contacts
+    .contacts-container
+      h2.h2 Feedback Form
+      .primary-form
+        .primary-form__row
+          label.primary-label Name
+            input.primary-input(type="text" name="name")
+          label.primary-label E-mail
+            input.primary-input(type="email" name="email")
+        .primary-form__row
+          label.primary-label Subject
+            amp-selector.primary-select(layout="container" name="Subject")
+              ul.primary-select__list
+                li.primary-select__option(option="1") Suggestion for improving service
+                  +icon('icon-check-mark')
+                li.primary-select__option(option="2" selected) This channel not working
+                  +icon('icon-check-mark')
+                li.primary-select__option(option="3") Suggestion for improving service      
+                  +icon('icon-check-mark')
+                li.primary-select__option(option="4") Errors and inaccuracies in the descriptions
+                  +icon('icon-check-mark')
+        .primary-form__row
+          label.primary-label Message
+            textarea.primary-textarea(rows="4" name="message")
+        .primary-form__row
+          amp-img(src="img/captcha.jpg" width="300" height="74" layout="fixed")
+        .primary-form__row
+          input.primary-submit(type="submit" value="Send")
+        .primary-form__row E-mail: 
+          a.inline-link(href="mailto:info@alltvonline.com") info@alltvonline.com

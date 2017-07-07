@@ -1,0 +1,29 @@
+//BEGIN sidebar_lang
+.sidebar-box
+  .panels
+    label.panels__item.prev(for=sidebar+"-pr1" role="button") Назад
+      +icon('icon-left-arr')
+    .panels__title Выбранные языки
+    - var list1 = [{name:"Россия",flag:"ru"}, {name:"Украина",flag:"ua"}, {name:"Великобритания",flag:"gb"}]
+      each item in list1
+        .panels__item
+          .panels__string
+            .flag
+              span.flag-icon(class="flag--"+item.flag)
+            span= item.name
+            a(href="#").panels__remove
+              +icon('icon-cross')
+    .panels__title Все языки
+    - var list2 = ["Азербайджан", "Армения", "Белоруссия", "Кыргызстан","Азербайджан", "Армения", "Белоруссия", "Кыргызстан", "Армения", "Белоруссия", "Кыргызстан"]
+      each item in list2
+        label.panels__item(role="button")
+          .panels__string
+            .flag
+              span.flag-icon.flag--cx
+            span= item
+            .panels__add
+              .checkbox
+                input(type="checkbox" class="checkbox__old")
+                span.checkbox__new
+                  +icon('icon-cross')
+//END sidebar_lang

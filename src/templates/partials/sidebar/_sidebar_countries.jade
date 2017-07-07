@@ -1,0 +1,31 @@
+//BEGIN sidebar_countries
+.sidebar-box
+  .panels
+    label.panels__item.prev(for=sidebar+"-pr2" role="button") Назад
+      +icon('icon-left-arr')
+    .panels__title Выбранные категории
+    - var list1 = [{name:"Россия",flag:"ru"}, {name:"Украина",flag:"ua"}, {name:"Великобритания",flag:"gb"}]
+      each item in list1
+        .panels__item
+          .panels__string
+            .flag
+              span.flag-icon(class="flag--"+item.flag)
+            span= item.name
+            a(href="#").panels__remove
+              +icon('icon-cross')
+    .panels__title Все категории
+    - var list2 = ["Азербайджан", "Армения", "Белоруссия", "Кыргызстан"]
+      each item in list2
+        label.panels__item(role="button")
+          .panels__string
+            .flag
+              .flag-icon.flag--it
+            span= item
+            .panels__add
+              .checkbox
+                input.checkbox__old(type="checkbox")
+                span.checkbox__new
+                  +icon('icon-cross')
+    label.panels__item.next(for="add-country" role="button" class="add-country-label") Добавить другую страну
+      +icon('icon-right-arr')
+//END sidebar_countries

@@ -1,0 +1,68 @@
+.regional-item
+  position: relative
+  padding-top: 24px 
+  height: 100% 
+  background-color: #6f3e84
+  &__title
+    margin: 0 11px 10px 24px
+    height: 24px
+    color: #f8f7f7
+    font-size: 24px
+    font-weight: 400
+    line-height: 24px
+  &__inner
+    position: relative
+    width: 100%
+    height: calc(100% - 48px)
+  &__list
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow-y: auto
+    overflow-x: hidden
+
+    &::-webkit-scrollbar
+      width: 4px
+      background-color: transparent 
+    &::-webkit-scrollbar-thumb
+      border-radius: 3px
+      background-color: #af68cc
+      opacity: 0.4
+
+  &__box
+    position: relative
+
+  &__link
+    display: block
+    position: relative
+    padding: 16px 0
+    margin-right: 22px 
+    margin-left: 24px 
+    z-index: 10 
+    color: #cdcccc
+    font-size: 18px
+    line-height: 32px
+    border-bottom: 1px solid #9452ae
+    &:hover
+      text-decoration: none
+      background-color: #9452ae
+      color: #FFF 
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      height: calc(100% + 3px)
+      width: 140%  
+      top: -1px
+      right: -20%
+      left: -20% 
+      bottom: 0 
+      background-color: inherit
+  &__logo
+    position: absolute
+    top: 0
+    right: 0
+    width: 32px
+    height: 32px

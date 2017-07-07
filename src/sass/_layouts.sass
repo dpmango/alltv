@@ -1,0 +1,50 @@
+.main
+  background-color: #F5F5F5 
+  position: relative
+  box-sizing: border-box
+  margin-left: 250px
+  min-height: 100vh
+  position: relative
+  padding-bottom: 144px
+  padding-top: 72px 
+  +r(1025)
+    +rmin(768)
+      padding-bottom: 176px
+  +tablet
+    margin-left: 0
+  +mob
+    padding-bottom: 128px
+    padding-top: 64px
+
+.footer
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+
+.sidebar
+  position: fixed
+  top: 0
+  bottom: 0
+  width: 250px
+  +tablet
+    height: auto
+    bottom: auto 
+    width: 100% 
+
+.sidebar-desktop
+  +tablet
+    display: none  
+.header
+  position: fixed
+  top: 0
+  left: 250px
+  right: 0
+  z-index: 99
+  +tablet
+    display: none
+
+.cat
+  margin-bottom: 100px
+  +tablet
+    margin-bottom: 0

@@ -1,0 +1,20 @@
+//BEGIN channel_item
+.channel-box.channel-box_left
+  a.channel-item(role="button" href="/channel")
+      h3.h3.channel-item__title Channel title
+      .channel-item__programm.mob-hidden
+        h5.h5 TV show title
+        .progress-item
+          .progress-item__time 00:00
+          .progress-item__bar
+            .progress-item__line.w60
+          .progress-item__time 00:00
+        .channel-item__location MSK
+      .channel-item__logo.channel-img-box
+        amp-img(src="img/regional-logo.png" layout="responsive" width="250" height="250" alt="channel")
+          div(fallback) offline
+      .flag
+        span.flag-icon.flag--ru
+
+      span.channel-item__groups.mob-hidden Groups
+//END channel_item

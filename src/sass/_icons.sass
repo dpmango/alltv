@@ -1,0 +1,78 @@
+.checkbox
+  display: inline-block
+  position: relative
+  margin: 0
+  line-height: 1 
+  &__old
+    display: none
+    visibility: hidden
+    &:checked ~ .checkbox__new .icon-cross
+      display: block
+  &__new
+    display: block
+    position: relative
+    width: 16px
+    height: 16px
+    border-radius: 2px
+    border: 1px solid #cdcccc
+    background-color: #f5f5f5
+    .icon-cross
+      +vcenter
+      left: 45% 
+      display: none
+.prev
+  padding-left: 40px       
+  .icon-left-arr
+    left: 15px
+
+.next
+  .icon-right-arr
+    right: 16px
+
+.icon-cross
+  font-size: 8px
+  fill: #000
+
+.icon-right-arr, .icon-left-arr
+  font-size: 16px
+  fill: #000
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+.icon-heart, .icon-arch, .icon-tile
+  +vcenter
+.icon-tile
+  font-size: 16px
+  fill: #fff
+.icon-arch
+  fill: #fff
+  font-size: 16px
+.icon-heart
+  stroke: #fff
+  stroke-width: 2px
+  fill: none
+  font-size: 16px
+.channel .icon-heart
+  stroke: #d0011b
+  font-size: 18px
+
+
+.icon-logo
+  fill: #fff
+  font-size: 40px
+
+.icon-search
+  font-size: 16px
+
+
+.icon-controls
+  font-size: 24px
+.icon-menu
+  font-size: 19px
+.icon-social-facebook
+  height: 1.3em
+.icon-social-bitly
+  width: 1em  
+.icon-social-link
+  height: 1.3em 

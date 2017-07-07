@@ -1,0 +1,97 @@
+.add-country-container
+  position: fixed
+  overflow: hidden
+  top: 72px
+  left: 250px
+  right: -18px
+  bottom: 0
+  transform: translateX(-100%)
+  z-index: -1
+  opacity: 0
+  +trans
+  +tablet
+    left: 0
+    right: 0
+    top: 0
+.add-country
+  position: relative
+  background-color: #FFF
+  overflow: auto
+  width: 100%
+  height: 100%
+  border-left: 8px solid #9452ae
+  padding: 32px
+  +mob
+    padding: 0
+  
+  .category-list
+    padding-right: 60px 
+    
+.add-country-close
+  width: 30px
+  height: 32px
+  font-size: 32px
+  position: absolute
+  right: 30px
+  top: 40px  
+  +mob
+    top: 16px
+    right: 16px  
+
+#add-country
+  display: none
+  
+#add-country
+  &:checked 
+    & ~ .add-country-label
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+      background-color: #9452ae
+    & ~ .add-country-container
+      opacity: 1
+      transform: translateX(0%)
+      z-index: 90
+      +tablet
+        z-index: 2147483648
+
+.category-checkbox
+  display: none
+  visibility: hidden
+
+.category-checkbox:checked ~ .countries-list .countries-col .letter-list .country-option
+    display: none
+
+.category-checkbox_latin:checked
+  & ~ .category-list .category-row label[for="category-checkbox-latin"]
+    background-color: #eee
+  & ~ .countries-list .countries-col .letter-list .country-option[data-category="latin"]
+    display: block
+  
+.category-checkbox_cis:checked
+  & ~ .category-list .category-row label[for="category-checkbox-cis"]
+    background-color: #eee
+  & ~ .countries-list .countries-col .letter-list .country-option[data-category="cis"]
+    display: block
+
+.category-checkbox_europe:checked
+  & ~ .category-list .category-row label[for="category-checkbox-europe"]
+    background-color: #eee
+  & ~ .countries-list .countries-col .letter-list .country-option[data-category="europe"]
+    display: block
+
+.category-checkbox_arab:checked
+  & ~ .category-list .category-row label[for="category-checkbox-arab"]
+    background-color: #eee
+  & ~ .countries-list .countries-col .letter-list .country-option[data-category="arab"]
+    display: block
+
+.category-checkbox_asia:checked
+  & ~ .category-list .category-row label[for="category-checkbox-asia"]
+    background-color: #eee
+  & ~ .countries-list .countries-col .letter-list .country-option[data-category="asia"]
+    display: block
+
+.category-checkbox_africa:checked
+  & ~ .category-list .category-row label[for="category-checkbox-africa"]
+    background-color: #eee
+  & ~ .countries-list .countries-col .letter-list .country-option[data-category="africa"]
+    display: block

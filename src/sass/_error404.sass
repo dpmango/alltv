@@ -1,0 +1,63 @@
+.error404
+  position: fixed
+  width: calc(100% - 250px)
+  background-color: #6f3e84
+  height: 100%
+  +tablet
+    width: 100%
+  +mob
+    & ~ .footer
+      display: none
+  &__inner
+    margin: 5% 0
+    padding: 0 16px 
+    display: flex
+    justify-content: center
+    align-items: center
+    +tablet
+      flex-direction: column
+      text-align: center
+  &__icon
+    font-size: 257px
+    +tablet
+      font-size: 161px 
+    svg
+      height: 1em
+  &__text
+    margin-left: 80px
+    +tablet
+      margin-left: 0
+  &__h1
+    color: #ffffff
+    font-family: "Proxima Nova", serif
+    font-size: 72px
+    font-weight: 700
+    line-height: 72px
+    text-transform: uppercase
+    letter-spacing: 4px
+    margin-bottom: 8px
+    +tablet
+      font-size: 40px
+      line-height: 40px
+      letter-spacing: 1px
+  &__info
+    color: #ffffff
+    font-size: 28px
+    line-height: 32px
+    margin-bottom: 16px
+    +tablet
+      font-size: 24px
+      line-height: 24px
+  &__desc
+    color: #ffffff
+    font-size: 18px
+    line-height: 24px
+    a
+      color: #ffffff
+      text-decoration: underline
+    +tablet
+      font-size: 14px
+      line-height: 16px
+
+.icon-error404
+  font-size: 257px

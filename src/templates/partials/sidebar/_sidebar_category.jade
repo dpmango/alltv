@@ -1,0 +1,23 @@
+//BEGIN sidebar_category
+.sidebar-box
+  .panels
+    label.panels__item.prev(for=sidebar+"-pr3" role="button") Назад
+      +icon('icon-left-arr')
+    .panels__title Выбранные категории
+    - var list1 = ["Новости", "Бизнес", "Музыка"]
+      each item in list1
+        .panels__item
+          .panels__string= item
+            a(href="#").panels__remove
+              +icon('icon-cross')
+    .panels__title Все категории
+    - var list2 = ["Общее ТВ", "Местное ТВ", "Спорт", "Развлечения"]
+      each item in list2
+        label.panels__item(role="button")
+          .panels__string= item
+            .panels__add
+              .checkbox
+                input.checkbox__old(type="checkbox")
+                span.checkbox__new
+                  +icon('icon-cross')
+//END sidebar_category

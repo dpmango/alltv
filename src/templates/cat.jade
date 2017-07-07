@@ -1,0 +1,114 @@
+---
+title: AllTV Online | cat
+---
+extends layouts/_layout
+block content
+  .cat
+    amp-img(src="/img/banner970.jpg" layout="responsive" width="970" height="90"  alt="AMP" class="banner banner-center tablet-hidden")
+    amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+    section.cat__section.section
+      h2.h2 World`s news live TV channels
+      p.cat__text.mob-hidden Начать смотреть онлайн ТВ можно, выбрав страну и тематику телеканала используя удобный пульт управления, который находится в сайдбаре слева. В центре страницы распологаются популярные каналы вашего региона. Добавить канал на наш сервис можно выбрав пункт "Добавить канал" в верхнем меню. 
+      .section__wrapper.channels-wrapper
+        .channels-column-container
+          .channels-column
+            .channels-group
+              .channels-group__head English
+                .flag
+                  span.flag-icon.flag--gb
+              .channels-group__inner
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item_no-programm
+              include partials/_channel_more_item
+            amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+            .channels-group.mob-hidden
+              .channels-group__head Espanol
+                  .flag
+                    span.flag-icon.flag--es
+              .channels-group__inner
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item_no-programm
+                include partials/_channel_item
+          .channels-column
+            .channels-group
+              .channels-group__head English
+                .flag
+                  span.flag-icon.flag--gb
+              .channels-group__inner
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+              include partials/_channel_more_item
+            amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+
+            .channels-group
+              .channels-group__head Espanol
+                  .flag
+                    span.flag-icon.flag--es
+              .channels-group__inner
+                include partials/_channel_item
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item
+              include partials/_channel_more_item
+            amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+          .channels-column.mob-hidden
+            .channels-group.channels-group-add
+              //begin
+              .channel-box.channel-box_right.channel-box_2x.channel-img-box.banner
+                amp-img(src="img/banner-250x250.jpg" layout="responsive" width="250" height="250"  alt="banner")
+              //end
+            .channels-group
+              .channels-group__head English
+                .flag
+                  span.flag-icon.flag--gb
+              .channels-group__inner
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item
+
+
+            .channels-group
+              .channels-group__head Espanol
+                  .flag
+                    span.flag-icon.flag--es
+              .channels-group__inner
+                include partials/_channel_item
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item
+          .channels-column.mob-hidden
+            .channels-group
+              .channels-group__head Espanol
+                  .flag
+                    span.flag-icon.flag--es
+              .channels-group__inner
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item
+                include partials/_channel_item
+            .channels-group
+              .channels-group__head English
+                .flag
+                  span.flag-icon.flag--gb
+              .channels-group__inner
+                include partials/_channel_item
+                include partials/_channel_item_no-programm
+                include partials/_channel_item_no-programm
+                include partials/_channel_item
+                include partials/_channel_item
+        p.cat__text.mob-visible Начать смотреть онлайн ТВ можно, выбрав страну и тематику телеканала используя удобный пульт управления, который находится в сайдбаре слева. В центре страницы распологаются популярные каналы вашего региона. Добавить канал на наш сервис можно выбрав пункт "Добавить канал" в верхнем меню.   

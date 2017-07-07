@@ -1,0 +1,23 @@
+include _mixins
+doctype html
+html(amp lang="ru")
+  head
+    include _headAMP
+
+  body(class=bodyClass)
+    block sidebar
+      include ../partials/_sidebar
+      include ../partials/sidebar/_sidebar-menu
+    //BEGIN out
+    .banner-bottom
+      amp-img(src="/img/banner-250x250.jpg" layout="responsive" width="250" height="250"  alt="banner")
+    .main(class=outClass)
+      .main-container
+        block header
+          include ../partials/_header
+        block content
+
+        include ../partials/_add-country
+        block footer
+          include ../partials/_footer
+    //END out

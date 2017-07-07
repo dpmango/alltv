@@ -1,0 +1,38 @@
+//- //BEGIN tooltip_date-programm
+//- amp-lightbox(id="tooltip_date-programm" layout="nodisplay" class="tooltip-box")
+//-   div(class="lightbox" on="tap:tooltip_date-programm.close" role="button" tabindex="0")
+//-     .common-tooltip
+//-       .common-tooltip__container
+//-         .common-tooltip__inner
+//-           .date-programm
+//-             .date-programm__item
+//-               .date-programm__top 13.05
+//-               .date-programm__bot пт
+//-             .date-programm__item
+//-               .date-programm__top 13.05
+//-               .date-programm__bot пт
+//-             .date-programm__item
+//-               .date-programm__top 13.05
+//-               .date-programm__bot пт
+//- //end tooltip_date-programm
+//BEGIN tooltip_date-programm
+.tooltip-accordion.mob-hidden
+  amp-accordion.accordion-tooltip
+    section.accordion-tooltip__section
+      h6.accordion-tooltip__h
+        .carousel-button(rel="button" on="tap:tooltip_date-programm" role="button" tabindex="0")
+          +icon('icon-double-rarr')
+      .common-tooltip
+        .common-tooltip__container
+          .common-tooltip__inner
+            .date-programm
+              a(href="#").date-programm__item
+                .date-programm__top 13.05
+                .date-programm__bot пт
+              a(href="#").date-programm__item
+                .date-programm__top 13.05
+                .date-programm__bot пт
+              a(href="#").date-programm__item
+                .date-programm__top 13.05
+                .date-programm__bot пт
+//end tooltip_date-programm

@@ -1,0 +1,238 @@
+amp-sidebar
+  width: 256px
+  +tablet
+    margin-top: 72px
+  +mob
+    margin-top: 64px
+  .sidebar-box
+    width: 100%
+    top: 0
+    max-height: calc(100vh - 72px)
+    +mob
+      max-height: calc(100vh - 64px)
+
+.sidebar-container
+  position: fixed
+  width: 100%
+  height: 100%
+  -ms-overflow-y: auto
+  overflow-y: auto
+.sidebar
+  z-index: 9999
+  height: 100vh
+  box-shadow: inset -1px 0 0 #e6e5e5
+  background-color: #ffffff
+.sidebar-desktop
+  position: relative
+  height: calc(100vh - 72px)
+  overflow: hidden
+.headline
+  display: flex
+  &__item
+    position: relative
+    width: 64px 
+    box-shadow: inset 0 -1px 0 #e6e5e5
+    cursor: pointer
+    .icon-controls, .icon-menu
+      +vcenter
+    &:first-child
+      box-shadow: inset -1px 0 0 #e6e5e5, inset 0 -1px 0 #e6e5e5
+    &:last-child
+      box-shadow: inset 1px 0 0 #e6e5e5, inset 0 -1px 0 #e6e5e5
+  &__logo
+    flex-grow: 1
+    height: 72px
+    box-shadow: inset 0 -1px 0 #e6e5e5
+    background-color: #ffffff
+    +mob
+      height: 64px
+
+.amp-tab-container
+  display: flex
+  flex-wrap: wrap
+
+.tab-control
+  width: calc(100%/3)
+  display: block
+  position: relative
+  cursor: pointer
+  height: 40px
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1)
+  background-color: #6f3e84
+  +trans
+  &:hover
+    background-color: #59306b
+
+.tab-content
+  display: none
+  height: 100% 
+  width: 100%
+  order: 1
+  max-height: calc(100vh - 104px)
+  &.with-banner
+    padding-bottom: 250px
+    +r(1024)
+      padding-bottom: 0
+
+amp-selector .tab-control[selected]
+  background-color: #9452ae 
+  outline: none
+
+.tab-control[selected]+.tab-content 
+  display: block
+
+
+.panels
+  &__title
+    height: 32px
+    padding: 8px 16px
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1)
+    background-color: #858889
+    color: #f8f7f7
+    font-size: 12px
+    font-weight: 400
+    line-height: 16px
+    text-transform: uppercase
+  &__list
+    display: flex
+    flex-direction: column
+    width: 100% 
+    overflow-y: auto
+    &_full
+      height: calc(100vh - 144px)
+      +rmin(1367)
+        height: calc(100vh - 144px - 250px)
+      +mob
+        height: calc(100vh - 136px)
+  &__content
+    display: flex
+    position: relative
+
+  &__item,&__row
+    display: block
+    padding: 16px
+    text-decoration: none
+    color: #000000
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+  &__item
+    position: relative
+    +trans
+    &:hover
+      text-decoration: none
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+      background-color: #f5f5f5
+      color: #000000
+  &__string
+    position: relative
+    +clr
+  &__remove
+    display: inline-block
+    position: absolute
+    padding: 5px 
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+  &__add
+    float: right
+    line-height: 1 
+    margin: 3px 0
+  &__revealer
+    display: none
+    visibility: hidden
+    &:checked ~ .sidebar-box
+      transform: translateX(0)
+.sidebar-box
+  position: fixed
+  -ms-overflow-y: auto
+  overflow-y: auto
+  width: 250px
+  top: 72px
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 999
+  background-color: #FFF 
+  box-shadow: inset -1px 0 0 #e6e5e5
+  transform: translateX(-100%)
+  +trans
+  +rmin(1367)
+    max-height: calc(100% - 250px - 72px)
+
+#sidebar-menu
+  display: none
+  &:checked ~ .sidebar-menu
+    transform: translateX(0)
+    z-index: 999
+    opacity: 1
+
+.sidebar-menu
+  position: fixed
+  top: 72px
+  overflow-y: auto
+  overflow-x: hidden
+  width: 256px
+  height: 100vh
+  transform: translateX(-100%)
+  opacity: 0
+  box-shadow: inset -1px 0 0 #e6e5e5
+  background-color: #ffffff
+  +trans
+  +mob
+    top: 64px
+  &__item
+    position: relative
+    display: block
+    padding: 16px
+    color: #000000
+    font-size: 14px
+    font-weight: 400
+    line-height: 16px
+    text-decoration: none
+  &__enter
+    width: 100%
+    position: absolute
+    display: none
+    z-index: -1
+    opacity: 0
+    +trans
+  &__close
+    position: absolute
+    top: -34px
+    right: 16px 
+
+#sidebar-menu-enter
+  display: none
+  &:checked ~ .sidebar-menu__enter
+    display: block
+    z-index: 99
+    opacity: 1
+    
+
+#mobile-sidebar
+  display: none
+  &:checked ~ .mobile-sidebar
+    transform: translateX(0)
+    z-index: 999
+    opacity: 1
+
+.mobile-sidebar
+  position: fixed
+  top: 72px
+  right: 0
+  overflow-y: auto
+  overflow-x: hidden
+  width: 256px
+  height: calc(100vh - 72px)
+  transform: translateX(100%)
+  opacity: 0
+  box-shadow: inset -1px 0 0 #e6e5e5
+  background-color: #ffffff
+  +trans
+  +mob
+    top: 64px
+    height: calc(100vh - 64px)
+  .sidebar-box
+    width: 100%
+    top: 0

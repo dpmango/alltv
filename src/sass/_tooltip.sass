@@ -1,0 +1,88 @@
+.accordion-tooltip
+  position: absolute
+  right: 0
+  top: 0
+  width: auto
+  &__section
+    display: flex 
+    justify-content: flex-end
+    flex-direction: column
+  &__h
+    background: none
+    border: none 
+    height: 92px
+    min-width: 250px 
+.common-tooltip
+  position: absolute
+  top: -20px
+  right: 4px
+  z-index: 999999999
+  &__container
+    position: relative
+    padding: 16px 16px 25px 
+    &:before
+      content: ""
+      display: block
+      width: 18px
+      height: 18px
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1)
+      border: 1px solid #e6e5e5
+      background-color: #ffffff
+      position: absolute
+      top: 10px
+      right: 40px
+      transform: rotate(55deg) skewX(20deg) 
+  &__inner
+    position: relative
+    width: auto
+    height: 100% 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1)
+    border: 1px solid #e6e5e5
+    background-color: #ffffff
+    &:before
+      content: ""
+      display: block
+      width: 16px
+      height: 16px
+      background-color: #ffffff
+      position: absolute
+      top: -6px
+      right: 24px
+      transform: rotate(55deg) skewX(20deg) 
+
+.date-programm
+  display: flex
+  position: relative
+  background: #fff
+  overflow: hidden 
+  justify-content: center
+  align-items: center
+  &__item
+    display: block
+    width: 72px
+    height: 72px
+    text-align: center
+    vertical-align: middle
+    color: #9452ae
+    text-decoration: none
+    box-shadow: inset -1px 0 0 #e6e5e5
+    &:hover
+      background-color: #f5f5f5
+      text-decoration: none
+      color: #9452ae
+    &:first-child
+      color: #000 
+  &__top
+    display: inline-block
+    width: 100% 
+    margin-top: 1.25em 
+    font-size: 14px
+    font-weight: 400
+    line-height: 16px
+
+  &__bot
+    display: inline-block
+    width: 100% 
+    font-size: 12px
+    font-weight: 400
+    line-height: 16px

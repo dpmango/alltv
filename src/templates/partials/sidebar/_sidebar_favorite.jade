@@ -1,0 +1,11 @@
+//BEGIN sidebar_favorite
+.panels
+  .panels__title Избранные Каналы
+  .panels__list.panels__list_full
+    - var channels = [{name:"2x2",type: 'green'},{name:"365 Music",type: 'green'},{name:"AMC TV",type: 'red'},{name:"Ani",type: 'green'},{name:"By Home TV",type: 'red'},{name:"365 Music",type: 'green'},{name:"AMC TV",type: 'red'},{name:"Ani",type: 'green'},{name:"By Home TV",type: 'red'},{name:"CBS Drama Russia",type: 'green'},{name:"CBS Reality Russia",type: 'green'}]
+      each channel in channels
+        .panels__item
+          .channel-light(class="channel-light_"+ channel.type)= channel.name
+            a(href="#").panels__remove
+              +icon('icon-cross')   
+//EN sidebar_favorite

@@ -1,0 +1,25 @@
+//BEGIN footer
+footer.footer
+  .footer__inner
+    .footer__left
+      .footer__top
+        .footer__logo
+          a.logo(href="/home")
+            +icon('icon-logo')
+        .footer__copy.sm-visible © 2017 Live TV online
+      .footer__flags
+        - var flags = ["gb", "ru", "ua", "fr", "de", "es", "it", "nl", "pl", "tr"]
+          each flag in flags
+            if flag == "ru"
+              a(href="#", title=flag, class="flag active")
+                span(class="flag-icon flag--"+flag)
+            else
+              a(href="#", title=flag, class="flag")
+                span(class="flag-icon flag--"+flag)
+    .footer__right.sm-hidden
+      ul.footer__nav
+        - var list = ["Дерево каналов", "Реклама", "Контакты", "Правообладателям"]
+          each item in list
+            li
+              a.footer__link(href="#")=item
+//END footer

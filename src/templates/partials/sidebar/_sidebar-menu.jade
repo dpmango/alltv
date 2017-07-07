@@ -1,0 +1,34 @@
+//BEGIN sidebar-menu
+input(type="checkbox" id="sidebar-menu")
+.sidebar-menu.tablet-visible
+  .sidebar-menu__inner
+    .search
+      input.search__input(type="text", placeholder="Поиск")
+      button.search__submit(type="submit")
+        +icon('icon-search')
+    label.sidebar-menu__item(for="sidebar-menu-enter")
+      div(class="enter-link" role="button") Вход
+        +icon('icon-enter')
+    input(type="checkbox" id="sidebar-menu-enter")
+    .sidebar-menu__enter
+      label.sidebar-menu__close(for="sidebar-menu-enter")
+        +icon('icon-big-cross')
+      .enter
+        .enter__container
+          .enter__inner
+            - var enterList = [{icon:"facebook",text:"Войти через Facebook"},{icon:"twitter",text:"Войти через Twitter"},{icon:"gplus",text:"Войти через Google"},{icon:"vk",text:"Войти через Контакте"},]
+              each item in enterList
+                a.enter__item(href="#")
+                  .enter__box
+                    .enter__icon
+                      .icon
+                        +icon('icon-social-'+item.icon)
+                    .enter__text= item.text
+
+    a(href="/tree").sidebar-menu__item Дерево каналов
+
+    a(href="/contacts").sidebar-menu__item Контакты
+    .sidebar-menu__item
+      a.link-small.circle-before(href="#") Webcam
+      a.link-small.circle-before(href="#") Radio
+//END sidebar-menu

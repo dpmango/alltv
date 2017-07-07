@@ -1,0 +1,22 @@
+//BEGIN header
+header.header
+  .header__inner
+    .header__left
+      .header__search
+        .search
+          input.search__input(type="text", placeholder="Поиск")
+          button.search__submit(type="submit")
+            +icon('icon-search')  
+      .header__link
+        a.link(href="#") Каталог
+    .header__right
+      .header__item
+        a.link-small.circle-before(href="#") Webcam
+      .header__item
+        a.link-small.circle-before(href="#") Radio
+      .header__item
+        button(class="enter-link" on="tap:enter_desctop" role="button" tabindex="0") Вход
+          +icon('icon-enter')
+        include _enter_desktop
+         
+//END header

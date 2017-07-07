@@ -1,0 +1,20 @@
+a.flag
+  &:hover
+    opacity: 0.5
+.flag
+  display: inline-block
+  font-size: 16px
+  line-height: 1
+  .footer__flags &
+    padding: 2px
+    margin: 5px 0
+    +mob
+      margin: 0
+  +mob
+    font-size: 15px 
+  &:not(:last-child)
+    margin-right: 16px 
+    +mob
+      margin-right: 5px
+  &.active
+    background-color: #FFF 

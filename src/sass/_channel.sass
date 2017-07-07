@@ -1,0 +1,383 @@
+.channel
+  width: 100%
+  margin-bottom: 2em
+  +mob
+    margin-bottom: 0
+  &__player
+    width: 100%
+  &__panel
+    position: relative
+    display: block
+    height: 55px
+    line-height: 55px
+    box-shadow: inset 0 1px 0 #e6e5e5, inset 0 -1px 0 #e6e5e5
+    background-color: #ffffff
+    overflow: hidden
+    +clr
+    +sm
+      height: 48px
+      line-height: 48px
+  &__left
+    float: left
+    height: 100% 
+    display: flex
+    align-items: center
+    +sm
+      float: none
+      width: 100% 
+      overflow-x: auto
+  &__right
+    float: right
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &_indent
+      padding-right: 16px
+    +sm
+      float: none
+      position: absolute
+      right: 0
+      top: 0
+      background-color: #FFF 
+  &__item
+    display: inline-block
+    padding: 0 8px
+    color: #858889
+    &_indent
+      margin-left: 1.5em
+  &__name
+    position: relative
+    display: inline-block
+    color: #000000
+    font-size: 18px
+    font-weight: 400
+    line-height: inherit
+    padding-left: 24px
+    +sm
+      -webkit-flex-grow: 1 
+      flex-grow: 1 
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      left: 8px
+      top: 50%
+      transform: translateY(-50%) 
+      line-height: inherit 
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background-color: #7ed321
+  &__btn
+    display: inline-block
+    position: relative
+    height: 100% 
+    padding: 20px 20px 20px 40px
+    color: #000000
+    font-size: 14px
+    font-weight: 400
+    line-height: 16px
+    box-shadow: inset 0 -1px 0 #e6e5e5, inset -1px 0 0 #e6e5e5
+    background: transparent
+    border: none
+    border-radius: 0
+    +sm
+      padding: 16px
+      &:before
+        display: none
+    &:hover
+      background-color: #f5f5f5
+    &.active
+      background-color: #9f4ab3
+      color: #ffffff
+      box-shadow: none
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 24px
+      transform: translate(0,-50%) 
+      display: inline-block
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background-color: #7ed321
+    &.is-off
+      &:before
+        background-color: #d0011b
+
+  &__btn-small
+    position: relative
+    display: inline-block
+    width: 55px
+    height: 55px
+    background-color: transparent
+    border-radius: 0
+    padding: 0
+    +sm
+      width: 48px
+      height: 48px
+      box-shadow: inset 1px 0 0 #e6e5e5, inset 0 1px 0 #e6e5e5
+    svg
+      +vcenter
+    .icon-arrow-left, .icon-arrow-right
+      font-size: 12px 
+      fill: #858889
+    .icon-like
+      font-size: 18px 
+      fill: #d0011b
+    .icon-page
+      font-size: 20px 
+    &:hover
+      box-shadow: inset -1px 0 0 #e6e5e5
+      background-color: #f5f5f5
+      .icon-arrow-left, .icon-arrow-right
+        fill: #000
+  &__btn-left
+    box-shadow: inset -1px 0 0 #e6e5e5
+  &__btn-right
+    box-shadow: inset -1px 0 0 #e6e5e5
+    +sm
+      order: 2
+      justify-self: end
+      box-shadow: inset 1px 0 0 #e6e5e5
+  &__programm
+    position: relative
+    display: block
+    background-color: #363b3d
+    height: 108px 
+    padding: 8px 
+    margin-bottom: 30px
+    +mob
+      padding: 0
+      height: auto 
+    *
+      &::-webkit-scrollbar
+        display: none
+  &__text
+    +sm
+      padding: 0 16px 
+    +mob
+      height: 48px 
+      overflow: hidden
+      -ms-text-overflow: ellipsis
+      text-overflow: ellipsis
+  
+  &__social
+    .socials
+      padding: 0
+      margin-left: -1px
+      .social-share
+        min-width: 1px
+        width: auto  
+        height: 40px
+        box-shadow: inset 1px 0 0 #cdcccc, inset 0 1px 0 #cdcccc
+    .icon-social-twitter, .icon-social-facebook, .icon-social-telegram
+      font-size: 16px 
+    .icon-social-vk, .icon-social-gplus
+      font-size: 14px 
+
+.channel-img-box
+  amp-img
+    width: 100%
+    height: 100%  
+
+.carousel-wrapper
+  position: relative
+.carousel
+  &__item
+    display: inline-block
+    min-width: 300px
+    width: 300px 
+    z-index: 0
+    border-radius: 2px
+    vertical-align: top
+    +trans
+    +mob
+      width: auto
+
+
+.amp-carousel-button, .carousel-button
+  position: absolute
+  top: 18px 
+  transform: translate(0,0)
+  width: 56px
+  height: 56px
+  border-radius: 2px
+  border: 1px solid #858889
+  background-color: rgba(0, 0, 0, 0.2)
+  +trans
+  &:hover
+    background-color: #000000
+  +mob
+    width: 40px
+    height: 88px
+    visibility: visible
+    opacity: 1
+
+  
+.carousel-button
+  right: 24px
+  z-index: 50
+  .icon-double-rarr
+    +vcenter
+    fill: #858889
+  &:hover
+    .icon-double-rarr
+      fill: #fff
+
+
+.amp-carousel-button-prev
+  left: 24px
+  background: transparent
+  +mob
+    top: 0
+    left: 0
+  &:after
+    content: ""
+    display: block
+    width: 12px
+    height: 12px
+    +vcenter
+    border-bottom: 1px solid #858889
+    border-left: 1px solid #858889
+    transform: translate(-25%,-50%) rotate(45deg)
+    +trans(border-color)
+  &:before
+    content: ""
+    position: absolute
+    top: -27px
+    left: -33px
+    display: block
+    height: 108px 
+    width: 169px
+    background-image: linear-gradient(to left, rgba(53, 59, 61, 0) 0%, #353b3d 100%)
+    +mob
+      display: none
+  &:hover
+    &:after
+      border-color: #FFF 
+
+
+
+.amp-carousel-button-next
+  right: 24px + 54
+  background: transparent
+  +mob
+    right: 0
+    top: 0
+  &:before
+    content: ""
+    position: absolute
+    top: -27px
+    right: -87px
+    display: block
+    height: 108px 
+    width: 169px
+    background-image: linear-gradient(to right, rgba(53, 59, 61, 0) 0%, #353b3d 100%)
+    +mob
+      display: none
+  &:after
+    content: ""
+    display: block
+    width: 12px
+    height: 12px
+    +vcenter
+    border-top: 1px solid #858889
+    border-right: 1px solid #858889
+    transform: translate(-75%,-50%) rotate(45deg)
+    +trans(border-color)
+  &:hover
+    &:after
+      border-color: #FFF 
+
+.programm-info
+  display: block
+  padding: 16px 
+  position: relative
+  height: 92px
+  border-radius: 2px
+  font-family: "Noto Sans", sans-serif
+  background-color: #2a2f30
+  text-decoration: none
+  white-space: normal
+  +trans
+  +mob
+    height: 100%
+    background-color: transparent 
+
+  &__inner
+    +mob
+      padding: 0 40px 
+  &__title
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    color: #cdcccc
+    text-overflow: ellipsis
+    overflow: hidden
+  &__time
+    color: #727576
+  &__text
+    max-width: 100% 
+    color: #727576
+    font-size: 12px
+    font-weight: 400
+    line-height: 13px
+    text-overflow: ellipsis
+    overflow: hidden
+  &__desc
+    color: #727576
+    margin-top: 8px 
+    opacity: 0
+    font-size: 13px
+    font-weight: 400
+    line-height: 16px
+    +trans
+    +mob
+      opacity: 1
+      margin-top: 40px
+  &:hover
+    background-color: #000000
+    text-decoration: none
+    height: auto
+    z-index: 1  
+    .programm-info__title
+      color: #ffffff
+    .programm-info__time
+      color: #c2c1c1
+    .programm-info__desc
+      opacity: 1
+    +mob
+      z-index: 1
+      background-color: transparent 
+  &.active
+    background-color: #f5f5f5
+    color: #363b3d
+    border: 1px solid #f5f5f5
+    padding: 15px 15px 23px
+    +trans
+    .programm-info__title
+      color: #363b3d
+      margin-bottom: 8px
+      +mob
+        color: #FFF 
+    &:hover
+      z-index: 40
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1)
+      border-color: #e6e5e5
+      background-color: #ffffff
+      &:after
+        opacity: 0 
+      .programm-info__desc
+        opacity: 1
+    +mob
+      background-color: transparent
+      color: #fff
+      border: none
+      &:hover
+        background-color: transparent
+        color: #fff
+        border: none
+        box-shadow: none
+        z-index: 1

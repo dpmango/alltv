@@ -1,0 +1,37 @@
+//BEGIN sidebar_main
+.panels
+  .panels__title Язык
+  label.panels__item.next(for=sidebar+"-pr1" role="button")
+    +icon('icon-right-arr')
+    .panels__content Русский, Украинский, Беларусский, Испанский
+  input(type="checkbox" id=sidebar+"-pr1" class="panels__revealer")
+  include _sidebar_lang
+.panels
+  .panels__title Страны
+  label.panels__item.next(for=sidebar+"-pr2" role="button")
+    +icon('icon-right-arr')
+    .panels__content
+      - var flags = ["ru", "ua","gb"]
+        each flag in flags
+          span(title=flag, class="flag")
+            span(class="flag-icon flag--"+flag)
+  input(type="checkbox" id=sidebar+"-pr2" class="panels__revealer")
+  include _sidebar_countries
+.panels
+  .panels__title Категории
+  label.panels__item.next(for=sidebar+"-pr3" role="button")
+    +icon('icon-right-arr')
+    .panels__content Новости, Бизнес, Музыка
+  input(type="checkbox" id=sidebar+"-pr3" class="panels__revealer")
+  include _sidebar_category
+
+amp-img.banner.banner_small(src="/img/bitmap.jpg" layout="responsive" width="320" height="100"  alt="banner")
+.panels
+  .panels__title Каналы
+  .panels__content
+    ul.list-unstyled.h360
+      - var channels = ["2x2", "365 Music", "AMC TV", "Ani", "By Home TV", "CBS Drama Russia", "CBS Reality Russia"]
+        each channel in channels
+          li
+            a.panels__item(href="#")=channel
+//END sidebar_main

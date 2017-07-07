@@ -1,0 +1,19 @@
+ProjectTitle: all-tv
+
+PageList:
+- file: home.html
+  ready: 100
+- file: channel.html
+  ready: 100
+- file: tree.html
+  ready: 100
+- file: contacts.html
+  ready: 100
+- file: violation.html
+  ready: 100
+- file: error404.html
+  ready: 100
+- file: cat.html
+  ready: 100
+- file: cat_region.html
+  ready: 100

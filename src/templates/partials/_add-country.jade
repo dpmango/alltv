@@ -1,0 +1,27 @@
+//BEGIN tooltip_add-country
+input#add-country(type="checkbox", name="add-country")
+.add-country-container
+  section.add-country
+    label.add-country-close(for="add-country" role="button")
+      +icon('icon-big-cross')
+    - var categorie = [{name:"Латинская Америка", reg:"latin"},{name:"Европа", reg:"europe"},{name:"СНГ", reg:"cis"},{name:"Арабские страны", reg:"arab"},{name:"Африка", reg:"africa"},{name:"Азия", reg:"asia"}]
+      each w in categorie
+        input(type="radio" name="category-checkbox" class="category-checkbox category-checkbox_"+w.reg id="category-checkbox-"+w.reg)
+    ul.category-list
+      li.category-row
+        - var categories = [{name:"Латинская Америка", reg:"latin"},{name:"Европа", reg:"europe"},{name:"СНГ", reg:"cis"},{name:"Арабские страны", reg:"arab"},{name:"Африка", reg:"africa"},{name:"Азия", reg:"asia"}]
+          each c in categories
+            label(for="category-checkbox-"+c.reg data-category=c.reg).category-link= c.name
+    ul.countries-list
+      - var countries = [{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Албания",reg:"arab"},{name:"Алжир",reg:"arab"},{name:"Ангола",reg:"africa"},{name:"Америка",reg:"latin"},]}, {title: "Б", names: [{name:"Белоруссия",reg:"cis"},{name:"Бразилия",reg:"latin"},{name:"Бельгия",reg:"europe"},{name:"Бахрейн",reg:"arab"},{name:"Бельгия",reg:"europe"},]},{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Албания",reg:"arab"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},]}, {title: "Б", names: [{name:"Белоруссия",reg:"cis"},{name:"Бразилия",reg:"latin"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},]},{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},]}, {title: "Б", names: [{name:"Белоруссия",reg:"cis"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},]},{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Албания",reg:"arab"},{name:"Австрия",reg:"europe"},{name:"Албания",reg:"arab"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},]}, {title: "Б", names: [{name:"Белоруссия",reg:"cis"},{name:"Бразилия",reg:"latin"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},]},{title: "A", names: [{name:"Албания",reg:"arab"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},]}, {title: "Б", names: [{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"}]},{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Албания",reg:"arab"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},]}, {title: "Б", names: [{name:"Белоруссия",reg:"cis"},{name:"Бразилия",reg:"latin"},{name:"Белоруссия",reg:"cis"},{name:"Бразилия",reg:"latin"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},]},{title: "К", names: [{name:"Китай",reg:"asia"},{name:"Корея",reg:"asia"},{name:"Катар",reg:"arab"},{name:"Камерун",reg:"africa"}]}, {title: "Н", names: [{name:"Намибия",reg:"africa"},{name:"Нигер",reg:"africa"},{name:"Нигерия",reg:"africa"}]},{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},]}, {title: "Б", names: [{name:"Белоруссия",reg:"cis"},{name:"Бельгия",reg:"europe"},{name:"Бельгия",reg:"europe"},]},{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Албания",reg:"arab"}]}, {title: "Б", names: [{name:"Белоруссия",reg:"cis"},{name:"Бразилия",reg:"latin"}]},{title: "A", names: [{name:"Австрия",reg:"europe"},{name:"Албания",reg:"arab"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},{name:"Австрия",reg:"europe"},]}, {title: "Я", names: [{name:"Япония",reg:"asia"},{name:"Яунде",reg:"africa"},{name:"Бельгия",reg:"europe"}]}]
+        each i in countries
+          li.countries-col
+            .countries-col__letter= i.title
+            amp-selector(layout="container" class="letter-list" multiple)
+              each el,j in i.names
+                span(option=j data-category=el.reg).country-option
+                  span.flag
+                    span.flag-icon.flag--gb
+                  span= el.name
+                  +icon('icon-cross')
+//BEGIN tooltip_add-country

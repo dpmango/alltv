@@ -1,0 +1,14 @@
+//BEGIN regional-item
+.regional-item
+  h3.regional-item__title Региональное ТВ
+  .regional-item__inner
+    ul.regional-item__list
+      - var list = ["12 канал Омск","26 Регион","27 ТРК Прокопьевск","360 Подмосковье","8 канал Новосибирск","26 Регион","27 ТРК Прокопьевск","360 Подмосковье","8 канал Новосибирск"]
+      each item in list
+        li.regional-item__row
+          a.regional-item__link(role="button")
+            .regional-item__box
+              .regional-item__text= item
+              .regional-item__logo
+                amp-img(src="/img/logotype.png" layout="responsive" width="10" height="10")
+//END regional-item

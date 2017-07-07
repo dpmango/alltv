@@ -1,0 +1,59 @@
+.socials
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  padding: 0 16px
+.social-share
+  display: block
+  position: relative
+  flex-grow: 1 
+  min-width: 56px 
+  height: 56px
+  background-color: transparent
+  +trans
+
+  +mob
+    min-width: 91px
+    width: calc(100%/3)
+    height: 56px
+
+  &:hover
+    background-color: #fff
+    +mob
+      .social-share__icon
+        fill: auto
+
+  &__icon
+    +vcenter
+    display: inline-block
+    +mob
+      svg
+        fill: #858889
+.socials-box
+  .social-share      
+    &:not(:last-child)
+      box-shadow: inset -1px 0 0 #cdcccc
+      +mob
+        box-shadow: inset -1px 0 0 #cdcccc, inset 0 -1px 0 #cdcccc
+        &:nth-child(3)
+          box-shadow: inset 0 -1px 0 #cdcccc
+        &:nth-child(6)
+          box-shadow: inset 0 -1px 0 #cdcccc
+        &:nth-child(7)
+          box-shadow: inset -1px 0 0 #cdcccc
+        &:nth-child(8)
+          box-shadow: inset -1px 0 0 #cdcccc
+
+.icon-social
+  &-facebook, &-link, &-bitly, &-ok
+    font-size: 24px
+  &-gplus
+    font-size: 16px
+  &-twitter
+    font-size: 20px
+  &-fav
+    font-size: 23px
+  &-telegram
+    font-size: 19px
+  &-vk
+    font-size: 14px

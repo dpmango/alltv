@@ -1,0 +1,161 @@
+---
+title: AllTV Online | channel
+_youtube: true
+_carousel: true
+_accordion: true
+---
+extends layouts/_layout
+block content
+  .channel
+    amp-img(src="/img/banner970.jpg" layout="responsive" width="970" height="90"  alt="AMP" class="banner banner-center")
+    amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+    .channel__panel
+      .channel__left
+        button.channel__btn-small.channel__btn-left
+          +icon('icon-arrow-left')
+        button.channel__btn-small.channel__btn-right
+          +icon('icon-arrow-right')
+        .channel__name Первый канал
+      .channel__right.channel__right_indent.sm-hidden
+        .channel__item
+            a(href="#").link Новости 
+        .channel__item
+            a(href="#").link Общее ТВ
+        .channel__item
+            a(href="#").link.flag.flag_UA
+        .channel__item
+            a(href="#").link.flag.flag_RU
+    amp-youtube(class="channel__player" width="480" height="270" layout="responsive" data-videoid="lBTCB7yLs8Y")
+    .channel__panel
+      .channel__left
+        button.channel__btn.active 
+          span.mob-hidden Stream #1
+          span.mob-visible S1
+        button.channel__btn.is-off 
+          span.mob-hidden Stream #2
+          span.mob-visible S2
+        button.channel__btn
+          span.mob-hidden Torrent #1
+          span.mob-visible T1
+        button.channel__btn.mob-visible 
+          span T2
+        button.channel__btn.mob-visible 
+          span T3
+        button.channel__btn.mob-visible 
+          span T4
+      .channel__right
+        button.channel__btn-small.mob-hidden
+          +icon('icon-page')
+        button.channel__btn-small
+          +icon('icon-heart')
+    .channel__programm
+      .carousel-wrapper
+        include partials/_tooltip_date-programm
+        //begin carousel
+        amp-carousel(height="230" layout="fixed-height" type="carousel" class="carousel")
+          .carousel__item
+            a(href="#" rel="button").programm-info.active
+              .programm-info__inner
+                .programm-info__title Воскресное «Время»
+                .channel-progress
+                .progress-item
+                  .progress-item__time 21:00
+                  .progress-item__bar
+                    .progress-item__line.w50
+                  .progress-item__time 22:30
+                  .progress-item__loc MSK
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время", которой суждено было побить все рекорды долголетия на отечественном телевидении и стать главной информационной программой страны.
+          .carousel__item
+            a(href="#" rel="button").programm-info
+              .programm-info__inner
+                .programm-info__title 
+                  span.programm-info__time 22:30 — 
+                  |  »Клуб Веселых и Находчивых". Высшая лига Третий четвертьф…
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время", которой суждено было побить все рекорды долголетия на отечественном телевидении и стать главной информационной программой страны.
+          .carousel__item
+            a(href="#" rel="button").programm-info
+              .programm-info__inner
+                .programm-info__title
+                  span.programm-info__time 03:30 —
+                  | Модный приговор
+                .programm-info__text Первое на отечественном телевидении грандиозное ток-шоу о моде и стиле. Вы сможете наблюдать, как женщины и мужч…
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время", которой суждено было побить все рекорды долголетия на отечественном телевидении и стать главной информационной программой страны.
+          .carousel__item
+            a(href="#" rel="button").programm-info
+              .programm-info__inner
+                .programm-info__title
+                  span.programm-info__time 03:30 —
+                  | Модный приговор
+                .programm-info__text Первое на отечественном телевидении грандиозное ток-шоу о моде и стиле. Вы сможете наблюдать, как женщины и мужч…
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время", которой суждено было побить все рекорды долголетия на отечественном телевидении и стать главной информационной программой страны.
+
+           .carousel__item
+            a(href="#" rel="button").programm-info
+              .programm-info__inner
+                .programm-info__title
+                  span.programm-info__time 03:30 —
+                  | Модный приговор
+                .programm-info__text Первое на отечественном телевидении грандиозное ток-шоу о моде и стиле. Вы сможете наблюдать, как женщины и мужч…
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время", которой суждено было побить все рекорды долголетия на отечественном телевидении и стать главной информационной программой страны.
+
+          .carousel__item
+            a(href="#" rel="button").programm-info
+              .programm-info__inner
+                .programm-info__title
+                  span.programm-info__time 00: 45 — 
+                  | Полёт Феникса 
+                .programm-info__text.
+                  В ливийской пустыне терпит крушение грузовой самолет, на борту которого собралась разномастная компания люд…
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время"
+          .carousel__item
+            a(href="#" rel="button").programm-info
+              .programm-info__inner
+                .programm-info__title
+                  span.programm-info__time 00: 45 — 
+                  | Полёт Феникса 
+                .programm-info__text.
+                  В ливийской пустыне терпит крушение грузовой самолет, на борту которого собралась разномастная компания люд…
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время"
+          .carousel__item
+            a(href="#" rel="button").programm-info
+              .programm-info__inner
+                .programm-info__title
+                  span.programm-info__time 03:30 —
+                  | Модный приговор
+                .programm-info__text Первое на отечественном телевидении грандиозное ток-шоу о моде и стиле. Вы сможете наблюдать, как женщины и мужч…
+              .programm-info__desc Ровно в девять вечера включать телевизор - этой традиции почти 50 лет. 1 января 1968 года впервые вышла в эфир программа "Время", которой суждено было побить все рекорды долголетия на отечественном телевидении и стать главной информационной программой страны.
+        //end carousel
+    section.section
+      .channel__text.text.
+          Для того, что бы смотреть Первый канал онлайн бесплатно на allTVonline.ru просто кликните на кнопку "Play" для начала стрима. Вы можете смотреть это канал на телефоне, планшете или компьютере с интернет соединением от 1Мб/с. Если вы не видете изображение, смените источник видеопотока в верхнем левом углу экрана. Для добавления канала «Первый канал» в список избранных нажмите на иконку в верхнем правом углу.
+    .channel__social.mob-visible
+      .socials
+        - var socials = ['facebook','gplus','twitter','vk','telegram']
+          each social in socials
+            div(class="social-share" role="button")
+              .social-share__icon
+                +icon('icon-social-'+social)
+    section.section.no-marb
+      amp-img(src="/img/banner320x100.jpg" layout="responsive" width="320" height="100"  alt="banner" class="mob-banner mob-visible")
+      h2.h2 Похожие каналы
+      .section__wrapper.channels-wrapper
+        .channels
+          //begin
+          .channel-box.channel-box_right.channel-box_2x.channel-img-box
+            amp-img(src="img/banner-250x250.jpg" layout="responsive" width="250" height="200"  alt="banner")
+          //end
+          include partials/_channel_item
+          include partials/_channel_item
+          include partials/_channel_item
+          include partials/_channel_item
+          include partials/_channel_item
+          include partials/_channel_item
+          amp-accordion.mob-visible
+            section.accordion
+              h6.accordion__head
+                span.show-more Ещё каналы…
+                span.show-less Скрыть каналы…
+              .accordion__content
+                include partials/_channel_item
+                include partials/_channel_item
+                include partials/_channel_item

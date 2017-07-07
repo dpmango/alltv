@@ -1,0 +1,182 @@
+body
+  background: #FFF
+  font-family: 'Noto Sans', sans-serif
+  font-size: 16px
+  font-weight: 400
+  line-height: 1.4
+  overflow: hidden
+p,.text
+  color: #000000
+  font-family: "Noto Sans", sans-serif
+  font-size: 16px
+  line-height: 24px
+  +mob
+    font-size: 13px
+    line-height: 16px
+    padding: 0 16px
+
+h2,.h2
+  color: #000000
+  font-family: "Noto Sans", sans-serif
+  font-size: 28px
+  font-weight: 400
+  line-height: 40px
+  min-height: 40px
+  margin: 0.86em 0
+  +mob
+    font-size: 18px
+    font-weight: 700
+    line-height: 20px
+    min-height: auto
+    margin: 16px
+
+h3,.h3
+  color: #000000
+  font-family: "Noto Sans", sans-serif
+  font-size: 24px
+  font-weight: 400
+  line-height: 24px
+  margin: 0 0 10px
+
+h5,.h5
+  margin: 0
+  color: #363b3d
+  font-family: "Noto Sans"
+  font-size: 13px
+  font-weight: 400
+  line-height: 16px
+.indent-x2
+  margin-bottom: 1.86em
+  +mob
+    margin-bottom: 16px
+
+.list-unstyled
+  display: block
+  width: 100%
+  list-style: none
+  padding: 0
+  margin: 0
+
+.logo
+  position: relative
+  display: flex
+  height: 100%
+  justify-content: center
+  align-items: center
+  &__link
+    display: inline-block
+    position: relative
+  &__text
+    position: absolute
+    right: 6px
+    bottom: 5px
+    width: 45px
+    height: 16px
+    color: #9452ae
+    font-family: "Clear Sans", sans-serif
+    font-size: 12px
+    font-weight: 400
+  &_all
+    fill: #1d1d1b
+  &_tv
+    fill: #9452ae
+  &_on
+    fill: #1d1d1b
+.link
+  display: inline-block
+  vertical-align: middle
+  color: #000
+  font-size: 16px
+  font-weight: 400
+  text-decoration: underline
+  &:hover
+    color: #9452ae
+    text-decoration: none
+.link-small
+  display: inline-block
+  margin-right: 32px
+  color: #858889
+  font-size: 11px
+  text-transform: uppercase
+  text-decoration: none
+  &:hover
+    color: #000000
+    text-decoration: none
+.circle-before
+  &:before
+    content: ""
+    display: inline-block
+    line-height: inherit
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    margin-right: 8px
+    background-color: #7ed321
+
+
+
+.banner-center
+  max-width: 970px
+  margin: 1em auto
+  display: none
+  +r(1366)
+    display: block
+  .channel &
+    margin: 0 auto
+
+.banner-bottom
+  display: none
+  position: fixed
+  z-index: 9999
+  bottom: 0
+  left: 0
+  width: 250px
+  height: 250px
+  +rmin(1367)
+    display: block
+.banner
+  position: relative
+  +r(1024)
+    display: none
+  &_small
+    margin: 8px
+
+.h360
+  height: 360px
+  overflow-y: auto
+  +r(1920)
+    max-height: calc(100vh - 513px - 250px)
+  +r(1366)
+    max-height: calc(100vh - 513px)
+  +tablet
+    max-height: 100%
+
+.channel-light
+  position: relative
+  padding-left: 16px
+  &:before
+    content: ""
+    display: block
+    width: 4px
+    height: 4px
+    border-radius: 50%
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+  &_green
+    &:before
+      background-color: #7ed321
+  &_red
+    &:before
+      background-color: #d0011b
+
+$class-slug: 'w'    /* базовое имя класса */
+
+@for $i from 1 through 100
+  @if $i % 5 == 0
+    .#{$class-slug}#{$i}
+      width: $i * 1%
+
+.i-amphtml-scroll-disabled
+  overflow-y: scroll !important

@@ -1,0 +1,15 @@
+//BEGIN enter_desctop
+amp-lightbox(id="enter_desctop" layout="nodisplay")
+  div(class="lightbox" on="tap:enter_desctop.close" role="button" tabindex="0")
+    .enter
+      .enter__container
+        .enter__inner
+          - var enterList = [{icon:"facebook",text:"Войти через Facebook"},{icon:"twitter",text:"Войти через Twitter"},{icon:"gplus",text:"Войти через Google"},{icon:"vk",text:"Войти через Контакте"},]
+            each item in enterList
+              a.enter__item(href="#")
+                .enter__box
+                  .enter__icon
+                    .icon
+                      +icon('icon-social-'+item.icon)
+                  .enter__text= item.text
+//end enter_desctop

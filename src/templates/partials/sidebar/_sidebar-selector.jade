@@ -1,0 +1,16 @@
+//BEGIN sidebar-selector
+amp-selector(title="tablist" layout="container" class="")
+  ul.amp-tab-container
+    li(title="tab" class="tab-control" selected option="a" data-tab="main")
+      +icon('icon-tile')
+    li(title="tabpanel" class="tab-content with-banner")
+      include _sidebar_main
+    li(title="tab" class="tab-control" option="b" data-tab="fav")
+      +icon('icon-heart')
+    li(title="tabpanel" class="tab-content")
+      include _sidebar_favorite
+    li(title="tab" class="tab-control" option="c" data-tab="archive")
+      +icon('icon-arch')
+    li(title="tabpanel" class="tab-content")
+      include _sidebar_archive
+//END sidebar-selector
