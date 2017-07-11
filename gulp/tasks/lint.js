@@ -1,7 +1,6 @@
 var gulp        = require('gulp');
 var config      = require('../config');
 var htmlhint    = require('gulp-htmlhint');
-var gitStaged   = require("gulp-git-staged");
 var sassLint    = require('gulp-sass-lint')
 var prettier    = require('gulp-prettier');
 var git         = require('gulp-git');
@@ -16,7 +15,6 @@ gulp.task('lint:js', function() {
 
 gulp.task('prettier', function() {
   return gulp.src(['src/js/**/*.js'])
-    .pipe(gitStaged())
     .pipe(prettier())
     .pipe(gulp.dest('src/js/'))
     .pipe(git.add({args: '-u'}))
@@ -25,7 +23,6 @@ gulp.task('prettier', function() {
 
 gulp.task('lint:html', function() {
   return gulp.src(config.dest.html + "/*.html")
-  	.pipe(gitStaged())
     .pipe(htmlhint('.htmlhintrc'))
     .pipe(htmlhint.failReporter());
 });
@@ -38,9 +35,9 @@ gulp.task('lint:sass', function() {
 });
 
 gulp.task('lint', [
-    
+
     'prettier',
-    
+
     'lint:sass',
     'lint:html'
 ]);
